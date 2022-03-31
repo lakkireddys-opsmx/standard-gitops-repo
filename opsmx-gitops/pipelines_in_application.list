@@ -1,0 +1,4 @@
+syncToGit
+syncToSpinnaker
+clean-up-pipeline-promotion-jobs
+restart-halyard
