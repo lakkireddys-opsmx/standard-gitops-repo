@@ -1,0 +1,10 @@
+{
+ "cloudProviders": "kubernetes",
+ "email": "test@opsmx.io",
+ "instancePort": 80,
+ "lastModifiedBy": "admin",
+ "name": "test",
+ "trafficGuards": [],
+ "updateTs": "1648830706000",
+ "user": "admin"
+}
