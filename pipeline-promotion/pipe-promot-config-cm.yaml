@@ -3,13 +3,13 @@ data:
   repo.properties: |
     #properties file for pipeline promotion scripts
 
-    repo_type=git
-    repo_name=standard-gitops-repo
+    repo_type=
+    repo_name=
     root_folder=
 
-    git_url=github.com
-    git_project=lakkireddys-opsmx
-    git_user=lakkireddys-opsmx
+    git_url=
+    git_project=
+    git_user=
 kind: ConfigMap
 metadata:
   name: pipe-promot-config
