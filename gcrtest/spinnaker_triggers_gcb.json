@@ -1,0 +1,44 @@
+{
+ "application": "gcrtest",
+ "id": "fb962fbc-963d-477c-9047-eb0aba616ccb",
+ "index": 1,
+ "keepWaitingPipelines": false,
+ "lastModifiedBy": "admin",
+ "limitConcurrent": true,
+ "name": "spinnaker_triggers_gcb",
+ "spelEvaluator": "v4",
+ "stages": [
+  {
+   "account": "quotient-gcb1",
+   "application": "gcrtest",
+   "buildDefinition": {
+    "options": {
+     "logging": "CLOUD_LOGGING_ONLY"
+    },
+    "steps": [
+     {
+      "args": [
+       "--version"
+      ],
+      "entrypoint": "mvn",
+      "name": "maven:3-jdk-8"
+     }
+    ]
+   },
+   "buildDefinitionSource": "text",
+   "name": "Google Cloud Build",
+   "refId": "1",
+   "requisiteStageRefIds": [],
+   "type": "googleCloudBuild"
+  }
+ ],
+ "triggers": [
+  {
+   "enabled": false,
+   "pubsubSystem": "google",
+   "subscriptionName": "quotient-gcb1",
+   "type": "pubsub"
+  }
+ ],
+ "updateTs": "1645102199000"
+}

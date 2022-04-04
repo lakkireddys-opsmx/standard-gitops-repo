@@ -1,0 +1,42 @@
+{
+ "application": "gcrtest",
+ "id": "50383739-b437-4204-901a-2ac1aed3b6d0",
+ "index": 3,
+ "keepWaitingPipelines": false,
+ "lastModifiedBy": "susmita.lakkireddy@opsmx.io",
+ "limitConcurrent": true,
+ "name": "gcs-deploy",
+ "spelEvaluator": "v4",
+ "stages": [
+  {
+   "account": "default",
+   "cloudProvider": "kubernetes",
+   "manifestArtifact": {
+    "artifactAccount": "gcs-demo",
+    "id": "a3f7c674-fce6-45f8-a3ab-8a7f2bada28f",
+    "name": "gs://srini-test-for-spin1/simple-deploy.yml",
+    "reference": "gs://srini-test-for-spin1/simple-deploy.yml",
+    "type": "gcs/object"
+   },
+   "moniker": {
+    "app": "gcrtest"
+   },
+   "name": "Deploy (Manifest)",
+   "namespaceOverride": "opsmx-isd",
+   "refId": "1",
+   "requisiteStageRefIds": [],
+   "skipExpressionEvaluation": false,
+   "source": "artifact",
+   "trafficManagement": {
+    "enabled": false,
+    "options": {
+     "enableTraffic": false,
+     "services": []
+    }
+   },
+   "type": "deployManifest"
+  }
+ ],
+ "triggers": [],
+ "updateTs": "1648563484000"
+}
