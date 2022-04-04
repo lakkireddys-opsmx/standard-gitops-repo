@@ -250,14 +250,8 @@ deploymentConfigurations:
   timezone: "America/Los_Angeles"
   ci:
     jenkins:
-      enabled: true
-      masters:
-      - name: "ref-jenkins"
-        permissions: {}
-        address: "https://jenkins.opsmx.net:8181/jenkins"
-        username: "opsmxdev"
-        password: "Bumblebee@123$"
-        csrf: true
+      enabled: false
+      masters: []
     travis:
       enabled: false
       masters: []
