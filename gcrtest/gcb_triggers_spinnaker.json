@@ -4,7 +4,7 @@
  "id": "8ad3dc04-c142-4068-8b01-73dbe87cea3f",
  "index": 2,
  "keepWaitingPipelines": false,
- "lastModifiedBy": "admin",
+ "lastModifiedBy": "susmita.lakkireddy@opsmx.io",
  "limitConcurrent": true,
  "name": "gcb_triggers_spinnaker",
  "spelEvaluator": "v4",
@@ -18,7 +18,7 @@
    "variables": [
     {
      "key": "image",
-     "value": "${trigger.payload.steps[2].args[1]}"
+     "value": "${trigger.payload.steps[0].name}"
     }
    ]
   },
@@ -127,5 +127,5 @@
    "type": "pubsub"
   }
  ],
- "updateTs": "1645115567000"
+ "updateTs": "1648536704000"
 }
