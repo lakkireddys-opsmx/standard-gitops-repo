@@ -1,0 +1,98 @@
+{
+ "application": "sampleapp",
+ "description": "This sample pipeline runs in a loop when invoked by Parent-LoopTrigger Pipeline.",
+ "id": "3dc6a4d7-4807-4347-96f9-c4c1d7af1cc5",
+ "index": 5,
+ "keepWaitingPipelines": false,
+ "lastModifiedBy": "anonymous",
+ "limitConcurrent": false,
+ "name": "child-trigger",
+ "parameterConfig": [
+  {
+   "default": "us-east-2",
+   "description": "",
+   "hasOptions": false,
+   "label": "",
+   "name": "region",
+   "options": [
+    {
+     "value": ""
+    }
+   ],
+   "pinned": false,
+   "required": true
+  },
+  {
+   "default": "cicd",
+   "description": "",
+   "hasOptions": false,
+   "label": "",
+   "name": "env",
+   "options": [
+    {
+     "value": ""
+    }
+   ],
+   "pinned": false,
+   "required": true
+  },
+  {
+   "default": "",
+   "description": "",
+   "hasOptions": false,
+   "label": "tenant_id",
+   "name": "tenant_id",
+   "options": [
+    {
+     "value": ""
+    }
+   ],
+   "pinned": false,
+   "required": false
+  }
+ ],
+ "spelEvaluator": "v4",
+ "stages": [
+  {
+   "failOnFailedExpressions": true,
+   "name": "Evaluate Variables",
+   "refId": "1",
+   "requisiteStageRefIds": [],
+   "type": "evaluateVariables",
+   "variables": [
+    {
+     "key": "env",
+     "value": "${parameters.env}"
+    },
+    {
+     "key": "region",
+     "value": "${parameters.region}"
+    },
+    {
+     "key": "tenantid",
+     "value": "${parameters.tenant_id}"
+    }
+   ]
+  },
+  {
+   "name": "Wait",
+   "refId": "2",
+   "requisiteStageRefIds": [
+    "1"
+   ],
+   "type": "wait",
+   "waitTime": 10
+  }
+ ],
+ "triggers": [
+  {
+   "enabled": true,
+   "payloadConstraints": {
+    "token": "BEGCL875GHKG645"
+   },
+   "source": "triggerpipe",
+   "type": "webhook"
+  }
+ ],
+ "updateTs": "1649055445000"
+}

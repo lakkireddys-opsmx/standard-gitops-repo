@@ -1,0 +1,58 @@
+{
+ "application": "sampleapp",
+ "description": "This pipeline shows the demo webhook trigger  with parameters and Constraints . Payload passes parameters and Constraints, then it call this trigger URL with POST method with the following payload\nWebhook URL :- http://GATE_URL/webhooks/webhook/webhook-trigger\nMethod :- POST\nPayload \n{\n  \"parameters\": {\n    \"email\": \"opsmx@opsmx.io\"\n  },\n  \"user\": \"opsmx\"\n}",
+ "id": "cf468df2-acf3-4211-bcd5-01020b0a92ab",
+ "index": 23,
+ "keepWaitingPipelines": false,
+ "lastModifiedBy": "anonymous",
+ "limitConcurrent": true,
+ "name": "webhook-evaluate",
+ "parameterConfig": [
+  {
+   "default": "",
+   "description": "",
+   "hasOptions": false,
+   "label": "email",
+   "name": "email",
+   "options": [
+    {
+     "value": ""
+    }
+   ],
+   "pinned": true,
+   "required": false
+  }
+ ],
+ "spelEvaluator": "v4",
+ "stages": [
+  {
+   "comments": "",
+   "failOnFailedExpressions": true,
+   "name": "Evaluate Variables",
+   "refId": "2",
+   "requisiteStageRefIds": [],
+   "type": "evaluateVariables",
+   "variables": [
+    {
+     "key": "parameter_email",
+     "value": "${trigger.parameters.email}"
+    },
+    {
+     "key": "user",
+     "value": "${trigger.payload.user}"
+    }
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "enabled": true,
+   "payloadConstraints": {
+    "user": "myvalue"
+   },
+   "source": "webhook-trigger",
+   "type": "webhook"
+  }
+ ],
+ "updateTs": "1649055446000"
+}

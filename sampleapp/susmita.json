@@ -1,0 +1,21 @@
+{
+ "application": "sampleapp",
+ "id": "791d7817-83df-4672-ad16-7bbb17d6bdfc",
+ "index": 24,
+ "keepWaitingPipelines": false,
+ "lastModifiedBy": "anonymous",
+ "limitConcurrent": true,
+ "name": "susmita",
+ "spelEvaluator": "v4",
+ "stages": [
+  {
+   "name": "Wait",
+   "refId": "1",
+   "requisiteStageRefIds": [],
+   "type": "wait",
+   "waitTime": 30
+  }
+ ],
+ "triggers": [],
+ "updateTs": "1649057054000"
+}
