@@ -21,3 +21,23 @@ kubernetes:
     cachingPolicies: []
     onlySpinnakerManaged: true
     checkPermissionsOnStartup: false
+  - name: "deployment-dev"
+    liveManifestCalls: true
+    requiredGroupMembership: []
+    providerVersion: "v2"
+    permissions: {}
+    dockerRegistries: []
+    kubeconfigFile: "configserver:kubeCfg_deployment-dev"
+    configureImagePullSecrets: true
+    serviceAccount: false
+    cacheThreads: 1
+    namespaces:
+    - "deployment-dev"
+    omitNamespaces: []
+    kinds: []
+    omitKinds:
+    - "podPreset"
+    customResources: []
+    cachingPolicies: []
+    onlySpinnakerManaged: true
+    checkPermissionsOnStartup: false
