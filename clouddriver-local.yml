@@ -1,5 +1,3 @@
- 
-  
 kubernetes:
   enabled: true
   accounts:
@@ -22,3 +20,4 @@ kubernetes:
     customResources: []
     cachingPolicies: []
     onlySpinnakerManaged: true
+    checkPermissionsOnStartup: false
